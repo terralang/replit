@@ -1,6 +1,7 @@
 run = ["terra", "main.t"]
 entrypoint = "main.t"
 hidden = ["helloterra"]
+language = "nix" # needed due to bug in Github import, technically this is supposed to be the default
 
 [languages.terra]
 pattern = "**/*.t"
