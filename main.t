@@ -34,3 +34,6 @@ terralib.saveobj("helloterra",{ main = hello })
 
 print("Running ./helloterra executable:")
 os.execute("./helloterra")
+
+-- For more examples and an overview of the Terra language, see:
+-- https://terralang.org/getting-started.html
