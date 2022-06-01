@@ -6,8 +6,8 @@ end
 printhello()
 print()
 
--- Terra is backwards compatible with C, we'll use C's io library in
--- our example.
+-- Terra is backwards compatible with C, we'll use C's io
+-- library in our example.
 local C = terralib.includec("stdio.h")
 
 -- The keyword 'terra' introduces a new Terra function.
@@ -17,8 +17,8 @@ terra hello(argc : int, argv : &rawstring)
     return 0
 end
 
--- You can call Terra functions directly from Lua, they are JIT
--- compiled using LLVM to create machine code.
+-- You can call Terra functions directly from Lua, they are
+-- JIT compiled using LLVM to create machine code.
 hello(0,nil)
 print()
 
@@ -28,12 +28,12 @@ print("Dissassembly of hello:")
 hello:disas()
 print()
 
--- You can save Terra code as executables, object files, or shared
--- libraries and link them into existing programs.
+-- You can save Terra code as executables, object files, or
+-- shared libraries and link them into existing programs.
 terralib.saveobj("helloterra",{ main = hello })
 
 print("Running ./helloterra executable:")
 os.execute("./helloterra")
 
--- For more examples and an overview of the Terra language, see:
--- https://terralang.org/getting-started.html
+-- For more examples and an overview of the Terra language,
+-- see: https://terralang.org/getting-started.html
