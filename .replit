@@ -1,0 +1,10 @@
+run = ["terra", "main.t"]
+entrypoint = "main.t"
+hidden = ["helloterra"]
+
+[languages.terra]
+pattern = "**/*.t"
+syntax = "lua"
+
+[nix]
+channel = "stable-21_11"
